@@ -1,0 +1,224 @@
+:root{
+  /* ## Colors */
+
+/* ### Primary */
+
+--Red: hsl(0, 100%, 74%); 
+--Green: hsl(154, 59%, 51%);
+
+/* ### Accent */
+
+--Blue: hsl(248, 32%, 49%);
+
+/* ### Neutral */
+
+--Dark-Blue: hsl(249, 10%, 26%); 
+--Grayish-Blue: hsl(246, 25%, 77%);
+--dark-green: #2fbb7e;
+}
+
+*{
+  /* box-sizing: border-box */
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-image: url(../assent/images/bg-intro-mobile.png);
+  background-color: var(--Red);
+  text-align: center;
+  margin: 0;
+  padding: 24px;
+  /* display: grid;  */
+}
+
+@media screen and (min-width:1440px){
+  body{
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assent/images/bg-intro-desktop.png);
+    height: 100vh;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .section{
+    width: 540px
+  }
+}
+
+.header{
+  color: white;
+  padding: 50px 0 56px;
+  /* padding-top: 45px; */
+  /* padding-bottom: 45px; */
+
+}
+
+@media screen and (min-width:1440px){
+  .header{
+    width: 40%;
+    text-align: left;
+    padding-right: 10px;
+  }
+}
+
+
+.title{
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+@media screen and (min-width:1440px){
+  .title{
+    font-size: 3rem;
+  }
+
+  .text__title{
+    padding-right: 10px;
+  }
+}
+
+.section__header{
+  font-size: .95rem; 
+  color: white;
+  background-color: var(--Blue);
+  padding: 5px 60px;
+  border-radius: 10px;
+  box-shadow: 0px 7px rgba(0, 0, 0, .13);
+  margin-bottom: 25px
+}
+
+.section__cta span{
+  font-weight: 700;
+}
+
+.form{
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 23px;
+  box-shadow: 0px 10px rgba(0, 0, 0, .13);
+  margin-bottom: 50px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  
+}
+
+@media screen and (min-width:1440px){
+  .form{
+    padding-top: 40px
+  }
+}
+
+.form__field{
+  position: relative
+  /* display: inline; */
+  /* width: 100%; */
+}
+
+
+.form__input{
+  width: 74%;
+  padding: 18px;
+  margin-bottom: 15px;
+  font-size: .9rem;
+  font-weight: 700;
+  color: black;
+  /* margin-bottom: 21px; */
+  border: 1px solid var(--Grayish-Blue);
+  border-radius: 5px 
+
+}
+
+@media screen and (min-width:1440px){
+  .form__input{
+    margin-bottom: 20px;
+    width: 78%;
+  }
+}
+
+.form__field--error{
+  margin-bottom: 20px;  
+}
+
+.form__field--error input{
+  border: 1px solid var(--Red);
+  color: var(--Red);
+}
+
+.form__field--error::after{
+  content: attr(data-error);
+  font-size: .8rem;
+  position: absolute;
+  color:var(--Red);
+  right: 25px;
+  bottom: -10px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.form__field--error::before{
+  content: url(../assent/icon/icon-error.svg);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  margin-top: -4px
+}
+
+@media screen and (min-width:1440px){
+  .form__field--error::before{
+    right: 60px;
+  }
+
+  .form__field--error::after{
+    right: 45px;
+  }
+}
+.submit{
+  color: white;
+  background-color: var(--Green);
+  padding-top: 18px;
+  padding-bottom: 13px;
+  border: none;
+  border-radius: 5px;
+  font-size: .9rem;
+  font-weight: 700;
+  width: 85%;
+  box-shadow: 0px 5px var(--dark-green);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width:1440px){
+  .submit:hover{
+    background-color: hsl(154, 56%, 63%)
+  }
+}
+
+.form__terms{
+  color: var(--Grayish-Blue);
+  font-size: .7rem;
+  margin: 10px 35px;
+  /* margin-bottom: 20px; */
+  padding-bottom: 20px;
+
+}
+
+@media screen and (min-width:1440px){
+  .form__terms{
+    padding-bottom: 40px;
+  }
+}
+
+.form__terms-and-services{
+  color: var(--Red);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: .7rem;
+}
